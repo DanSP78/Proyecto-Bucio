@@ -1,0 +1,51 @@
+<div class="class-container">
+  <div class="row">
+    <div class="col-md-5 offset-md-3">
+      <div class="card card-body bg-dark p-4 text-white">
+        <h1>Pagina para editar profesor</h1>
+
+<form action="/profesor/{{profesor._id}}/update" method="POST">
+<div>
+    <label for="rfc">Escribe tu RFC: </label>
+    <input type="text" name="rfc" placeholder="RFC" value="{{profesor.rfc}}"/>
+  </div>
+  <div>
+    <label for="nombre">Escribe tu Nombre: </label>
+    <input type="text" name="nombre" placeholder="Name" value="{{profesor.nombre}}" />
+  </div>
+  <div>
+    <label for="paterno">Escribe apellido paterno: </label>
+    <input type="text" name="paterno" placeholder="Paternal" value="{{profesor.paterno}}"/>
+  </div>
+  <div>
+    <label for="materno">Escribe appelido Materno: </label>
+    <input type="text" name="materno" placeholder="Maternal" value="{{profesor.materno}}"/>
+  </div>
+  <div>
+    <label for="fechaNac">Selecciona tu facha de nacimiento: </label>
+    <input type="date" name="fechaNac" placeholder="Date" value="{{profesor.fechaNac}}" />
+  <div>
+    <label for="direccion">Escribe tu direccion:</label>
+    <textarea name="direccion" cols="30" rows="10" placeholder="Adress" >
+        {{profesor.direccion}}</textarea>
+  </div>
+    </div>
+      <label for="celular">Escribe tu celular:</label>
+    <input type="text" name="celular" placeholder="Phone" value="{{profesor.celular}}" />
+  </div>
+  <div>
+    <label for="profesion">Escribe tu Profesion: </label>
+    <input type="text" name="profesion" placeholder="Profession" value="{{profesor.profesion}}" />
+  </div>
+  <div>
+    <label for="numEmpleado">Escribe tu Numero de Empleado: </label>
+    <input type="text" name="numEmpleado" placeholder="Employee number" value="{{profesor.numEmpleado}}" />
+  </div>
+<button class="btn btn-success btn-sm mt-2">Actualizar Profesor</button>
+</form>
+
+      </div>
+    </div>
+  </div>
+
+</div>

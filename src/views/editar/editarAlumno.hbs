@@ -1,0 +1,50 @@
+<div class="class-container">
+  <div class="row">
+    <div class="col-md-5 offset-md-3">
+      <div class="card card-body bg-dark p-4 text-white">
+
+<h4>Pagina para Editar Alumno</h4>
+
+
+
+<form action="/alumno/{{alumno._id}}/update" method="POST">
+  <div>
+  <label for="nombre">Escribe tu nombre: </label>
+  <input type="text" name="nombre" placeholder="Name" value="{{alumno.nombre}}" class="form-control bg-dark text-white" />
+</div>
+<div>
+  <label for="paterno">Escribe apellido paterno: </label>
+  <input type="text" name="paterno" placeholder="Paternal" value="{{alumno.paterno}}" class="form-control bg-dark text-white">
+</div>
+<div>
+  <label for="materno">Escribe appelido Materno: </label>
+  <input type="text" name="materno" placeholder="Maternal" value="{{alumno.materno}}" class="form-control bg-dark text-white">
+</div>
+<div>
+  <label for="fechaNac">Selecciona tu facha de nacimiento: </label>
+  <input type="date" name="fechaNac" placeholder="Date" value="{{alumno.fechaNac}}" class="form-control bg-dark text-white">
+</div>
+<div>
+    <label for="sexo">Selecciona tu sexo:</label>
+    <input type="radio" name="sexo" value="H" value="{{alumno.sexo}}" class="bg-dark text-white" />
+    Hombre
+    <input type="radio" name="sexo" value="M" value="{{alumno.sexo}}" class="bg-dark text-white"/>
+    Mujer
+
+  </div>
+  <div>
+    <label for="celular">Escribe tu celular:</label>
+    <input type="text" name="celular" placeholder="Phone" value="{{alumno.celular}}" class="form-control bg-dark text-white"/>
+  </div>
+  <div>
+    <label for="direccion">Escribe tu direccion:</label>
+    <textarea name="direccion" cols="30" rows="10" placeholder="Adress" class="form-control bg-dark text-white">{{alumno.direccion}}</textarea>
+  </div>
+
+  <button class="btn btn-success btn-sm mt-2">Actualizar Alumno</button>
+</form>
+</div>
+    </div>
+  </div>
+
+</div>

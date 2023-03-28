@@ -1,0 +1,43 @@
+{{#if alumno}}
+<table class="table table-bordered table-hover table-dark">
+    <thead>
+        <tr class="text-center">
+            <th>Num.</th>
+            <th>Nombre</th>
+            <th>Paterno</th>
+            <th>Materno</th>
+            <th>fechaNac</th>
+            <th>Sexo</th>
+            <th>Celular</th>
+            <th>Direccion</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each alumno}}
+            <tr>
+                <th>{{@index}}</th>
+                <td>{{nombre}}</td>
+                <th>{{paterno}}</th>
+                <th>{{materno}}</th>
+                <th>{{fechaNac}}</th>
+                <th>{{sexo}}</th>
+                <th>{{celular}}</th>
+                <th>{{direccion}}</th>
+                <td>
+                    {{#if opcion}}
+                        <a href="/alumno/{{_id}}/status" class="btn btn-warning">No Disponible</a>
+                    {{else}}
+                        <a href="/alumno/{{_id}}/status" class="btn btn-success">Disponible</a>
+                    {{/if}} 
+                    <a href="/alumno/{{_id}}/update" class="btn btn-info">Actualizar</a>
+                    <a href="/alumno/{{_id}}/delete" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        {{/each}} 
+    </tbody>
+</table>
+{{else}}
+<div class="text-center"><h1>No hay Alumno</h1>
+    <img src="" alt="">
+</div> 
+{{/if}}
